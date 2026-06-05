@@ -79,7 +79,7 @@ html, body, [class*="css"], .stApp {
 /* CHECKBOXES */
 .stCheckbox { margin-bottom: 1px !important; }
 .stCheckbox label {
-    color: #64748b !important; font-size: 0.86rem !important;
+    color: #94a3b8 !important; font-size: 0.86rem !important;
     font-family: 'Space Grotesk', sans-serif !important;
     padding: 5px 0 !important;
     transition: color 0.15s;
@@ -178,17 +178,17 @@ div[data-testid="column"]:last-child .stButton > button {
     display:flex; align-items:center; justify-content:center;
     font-size:0.62rem; flex-shrink:0; margin-top:2px;
 }
-.sc { color:#334155; }
-.sr { color:#6366f1; font-weight:600; }
-.sk { color:#4ade80; }
-.scf{ color:#1e293b; font-size:0.66rem; }
+.sc { color:#94a3b8; }
+.sr { color:#818cf8; font-weight:600; }
+.sk { color:#4ade80; font-weight:600; }
+.scf{ color:#475569; font-size:0.66rem; }
 
 /* PORQUE */
 .dm-pq {
     background:#080b14; border:1px solid rgba(255,255,255,0.04);
     border-radius:10px; padding:1rem 1.2rem;
     font-family:'JetBrains Mono',monospace;
-    font-size:0.73rem; color:#475569; line-height:1.8; white-space:pre-wrap;
+    font-size:0.73rem; color:#94a3b8; line-height:1.8; white-space:pre-wrap;
 }
 
 /* DOWNLOAD */
