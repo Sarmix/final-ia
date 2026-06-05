@@ -300,28 +300,28 @@ with col_r:
                 # Fallas + urgencia
                 badges = "".join(f'<span class="dm-badge">{TIPO_FALLA_ETIQUETAS.get(f,f)}</span>' for f in fallas)
                 urg_cls = URG_CLS.get(urgencia, "u-baja")
-                st.markdown(f"""
-                <div class="dm-rcard">
-                  <div class="dm-rcard-title">③ Fallas detectadas</div>
-                  <div style="margin-bottom:12px">{badges}</div>
-                  <div style="display:flex;align-items:center;gap:10px">
-                    <span style="color:#334155;font-size:0.72rem;text-transform:uppercase;letter-spacing:1px">Urgencia máxima</span>
-                    <span class="dm-urg {urg_cls}">{urgencia.upper()}</span>
-                  </div>
-                </div>""", unsafe_allow_html=True)
+                st.markdown(
+                    f'<div class="dm-rcard"><div class="dm-rcard-title">③ Fallas detectadas</div>'
+                    f'<div style="margin-bottom:12px">{badges}</div>'
+                    f'<div style="display:flex;align-items:center;gap:10px">'
+                    f'<span style="color:#334155;font-size:0.72rem;text-transform:uppercase;letter-spacing:1px">Urgencia máxima</span>'
+                    f'<span class="dm-urg {urg_cls}">{urgencia.upper()}</span>'
+                    f'</div></div>',
+                    unsafe_allow_html=True
+                )
 
                 # Aptitud
                 apt_cls, apt_icon, apt_lbl, apt_desc = APT_CFG.get(aptitud, ("a-baja","⚪","—",""))
                 accion_txt = DESCRIPCIONES_ACCION.get(accion, accion)
-                st.markdown(f"""
-                <div class="dm-rcard">
-                  <div class="dm-rcard-title">④ Diagnóstico final</div>
-                  <div class="dm-apt {apt_cls}">
-                    <div class="dm-apt-icon">{apt_icon}</div>
-                    <div class="dm-apt-label">{apt_lbl}</div>
-                    <div class="dm-apt-desc">{accion_txt}</div>
-                  </div>
-                </div>""", unsafe_allow_html=True)
+                st.markdown(
+                    f'<div class="dm-rcard"><div class="dm-rcard-title">④ Diagnóstico final</div>'
+                    f'<div class="dm-apt {apt_cls}">'
+                    f'<div class="dm-apt-icon">{apt_icon}</div>'
+                    f'<div class="dm-apt-label">{apt_lbl}</div>'
+                    f'<div class="dm-apt-desc">{accion_txt}</div>'
+                    f'</div></div>',
+                    unsafe_allow_html=True
+                )
 
                 # Cadena de inferencia
                 pasos_html = ""
@@ -330,19 +330,19 @@ with col_r:
                     ck, cv = paso["conclusion"]
                     cf = paso.get("certeza", 1.0)
                     cf_str = f'<span class="scf"> [CF={cf:.2f}]</span>' if cf < 1.0 else ""
-                    pasos_html += f"""
-                    <div class="dm-step">
-                      <div class="dm-sn">{i}</div>
-                      <div><span class="sr">[{paso['regla']}]</span>
-                      <span class="sc"> SI {conds} → </span>
-                      <span class="sk">{ck} = {cv}</span>{cf_str}</div>
-                    </div>"""
+                    pasos_html += (
+                        f'<div class="dm-step">'
+                        f'<div class="dm-sn">{i}</div>'
+                        f'<div><span class="sr">[{paso["regla"]}]</span>'
+                        f'<span class="sc"> SI {conds} → </span>'
+                        f'<span class="sk">{ck} = {cv}</span>{cf_str}</div>'
+                        f'</div>'
+                    )
 
-                st.markdown(f"""
-                <div class="dm-rcard">
-                  <div class="dm-rcard-title">⑤ Cadena de inferencia</div>
-                  {pasos_html}
-                </div>""", unsafe_allow_html=True)
+                st.markdown(
+                    f'<div class="dm-rcard"><div class="dm-rcard-title">⑤ Cadena de inferencia</div>{pasos_html}</div>',
+                    unsafe_allow_html=True
+                )
 
                 # ¿Por qué?
                 with st.expander("◈  ¿Por qué se llegó a estas conclusiones?"):
