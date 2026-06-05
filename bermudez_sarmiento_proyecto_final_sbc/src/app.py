@@ -52,10 +52,10 @@ html, body, [class*="css"], .stApp {
 }
 .dm-logo { font-size: 2.6rem; font-weight: 700; letter-spacing: -2px; line-height: 1; margin-bottom: 6px; }
 .dm-logo span { color: #6366f1; }
-.dm-desc { font-size: 0.85rem; color: #475569; font-weight: 300; line-height: 1.6; }
+.dm-desc { font-size: 0.85rem; color: #94a3b8; font-weight: 300; line-height: 1.6; }
 .dm-nums { display:flex; gap:2rem; margin-top:1rem; }
 .dm-num-n { font-size:1.4rem; font-weight:700; color:#6366f1; line-height:1; }
-.dm-num-l { font-size:0.62rem; color:#334155; text-transform:uppercase; letter-spacing:1px; }
+.dm-num-l { font-size:0.62rem; color:#64748b; text-transform:uppercase; letter-spacing:1px; }
 
 /* SECTION LABEL */
 .sec-label {
@@ -117,7 +117,7 @@ div[data-testid="column"]:last-child .stButton > button {
     background: #0d1117;
 }
 .dm-empty-icon { font-size:2.5rem; opacity:0.2; margin-bottom:1rem; }
-.dm-empty-text { font-size:0.72rem; color:#1e293b; text-transform:uppercase; letter-spacing:2px; font-weight:600; }
+.dm-empty-text { font-size:0.72rem; color:#64748b; text-transform:uppercase; letter-spacing:2px; font-weight:600; }
 
 /* RESULT CARDS */
 .dm-rcard {
@@ -181,7 +181,7 @@ div[data-testid="column"]:last-child .stButton > button {
 .sc { color:#94a3b8; }
 .sr { color:#818cf8; font-weight:600; }
 .sk { color:#4ade80; font-weight:600; }
-.scf{ color:#475569; font-size:0.66rem; }
+.scf{ color:#94a3b8; font-size:0.66rem; }
 
 /* PORQUE */
 .dm-pq {
@@ -206,7 +206,7 @@ div[data-testid="column"]:last-child .stButton > button {
 
 /* EXPANDER */
 details { background:#0d1117 !important; border:1px solid rgba(255,255,255,0.05) !important; border-radius:10px !important; }
-summary { color:#334155 !important; font-size:0.8rem !important; font-family:'Space Grotesk',sans-serif !important; }
+summary { color:#94a3b8 !important; font-size:0.8rem !important; font-family:'Space Grotesk',sans-serif !important; }
 
 #MainMenu, footer, header { visibility:hidden; }
 hr { border-color:rgba(255,255,255,0.04) !important; }
@@ -287,7 +287,7 @@ with col_r:
                 st.markdown("""
                 <div class="dm-rcard">
                   <div class="dm-rcard-title">Sin conclusión</div>
-                  <p style="color:#475569;font-size:0.85rem">
+                  <p style="color:#94a3b8;font-size:0.85rem">
                     Los síntomas seleccionados no activan ninguna regla. Intenta otra combinación.
                   </p>
                 </div>""", unsafe_allow_html=True)
@@ -304,7 +304,7 @@ with col_r:
                     f'<div class="dm-rcard"><div class="dm-rcard-title">③ Fallas detectadas</div>'
                     f'<div style="margin-bottom:12px">{badges}</div>'
                     f'<div style="display:flex;align-items:center;gap:10px">'
-                    f'<span style="color:#334155;font-size:0.72rem;text-transform:uppercase;letter-spacing:1px">Urgencia máxima</span>'
+                    f'<span style="color:#64748b;font-size:0.72rem;text-transform:uppercase;letter-spacing:1px">Urgencia máxima</span>'
                     f'<span class="dm-urg {urg_cls}">{urgencia.upper()}</span>'
                     f'</div></div>',
                     unsafe_allow_html=True
@@ -357,6 +357,6 @@ with col_r:
 
 st.markdown("---")
 st.markdown("""
-<div style="text-align:center;color:#1e293b;font-size:0.7rem;padding:4px 0;font-family:'Space Grotesk',sans-serif">
+<div style="text-align:center;color:#64748b;font-size:0.7rem;padding:4px 0;font-family:'Space Grotesk',sans-serif">
   DiagMoto · IA II · Manuel Bermudez &amp; Wilson Sarmiento · Los Libertadores · 2026
 </div>""", unsafe_allow_html=True)
