@@ -60,11 +60,11 @@ html, body, [class*="css"], .stApp {
 /* SECTION LABEL */
 .sec-label {
     font-size: 0.62rem; font-weight: 700; letter-spacing: 2px;
-    text-transform: uppercase; color: #334155;
+    text-transform: uppercase; color: #94a3b8;
     margin-bottom: 0.7rem; margin-top: 1.4rem;
     display: flex; align-items: center; gap: 8px;
 }
-.sec-label::after { content:''; flex:1; height:1px; background:rgba(255,255,255,0.04); }
+.sec-label::after { content:''; flex:1; height:1px; background:rgba(255,255,255,0.08); }
 
 /* SELECTBOX */
 .stSelectbox label { display:none !important; }
@@ -129,11 +129,11 @@ div[data-testid="column"]:last-child .stButton > button {
 }
 .dm-rcard-title {
     font-size: 0.62rem; font-weight:700; letter-spacing:2px;
-    text-transform:uppercase; color:#334155;
+    text-transform:uppercase; color:#94a3b8;
     margin-bottom: 0.9rem;
     display:flex; align-items:center; gap:8px;
 }
-.dm-rcard-title::after { content:''; flex:1; height:1px; background:rgba(255,255,255,0.04); }
+.dm-rcard-title::after { content:''; flex:1; height:1px; background:rgba(255,255,255,0.08); }
 
 /* BADGES */
 .dm-badge {
